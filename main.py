@@ -6,7 +6,7 @@ def function(event, context):
     # Use a breakpoint in the code line below to debug your script.
     a=np.array([1,2,3])
     print(a*event['n'])
-    return f"Hi, {a*event['n']}"  # Press ⌘F8 to toggle the breakpoint.
+    return a*event['n']  # Press ⌘F8 to toggle the breakpoint.
 
 
 # Press the green button in the gutter to run the script.
