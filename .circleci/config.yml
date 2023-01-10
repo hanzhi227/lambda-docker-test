@@ -9,14 +9,13 @@ jobs:
       - checkout
       - setup_remote_docker
       - run: |
-          TAG=0.1
-          docker build -t hanzhi227/lambda-docker-test:0.1  .
+          docker build -t hanzhi227/lambda-docker-test:house  .
           echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-          docker push hanzhi227/flask-circleci-test:$TAG
+          docker push hanzhi227/lambda-docker-test:house
 #      -
   test:
     docker:
-      - image: hanzhi227/lambda-docker-test:0.1
+      - image: hanzhi227/lambda-docker-test:house
     steps:
       - checkout
       - python/install-packages:
