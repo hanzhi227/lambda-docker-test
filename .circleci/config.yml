@@ -18,8 +18,8 @@ jobs:
     steps:
       - run: ls -lR /home/circleci/project
       - checkout
-      - python/install-packages:
-          pkg-manager: pip
+#      - python/install-packages:
+#          pkg-manager: pip
       - run:
           name: Run tests
           command: pytest
