@@ -16,6 +16,7 @@ jobs:
     docker:
       - image: hanzhi227/lambda-docker-test:np
     steps:
+      - run: ls -lR /home/circleci/project
       - checkout
       - python/install-packages:
           pkg-manager: pip
