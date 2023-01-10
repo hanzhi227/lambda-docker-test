@@ -34,3 +34,6 @@ workflows:
   test-only:
     jobs:
       - test
+  build-only:
+    jobs:
+      - build
