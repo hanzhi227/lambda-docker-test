@@ -1,7 +1,7 @@
-FROM public.ecr.aws/lambda/python:3.8
+FROM cimg/python:3.11.1
 
-COPY requirements1.txt  .
+COPY requirements1.txt  requirements.txt
 RUN pip install --upgrade pip
-RUN pip install -r requirements1.txt
+RUN pip install -r requirements.txt
 
-LABEL com.circleci.preserve-entrypoint=true
+ENTRYPOINT ["main.py"]

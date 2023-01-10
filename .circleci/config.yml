@@ -12,7 +12,6 @@ jobs:
           docker build -t hanzhi227/lambda-docker-test:house  .
           echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
           docker push hanzhi227/lambda-docker-test:house
-#      -
   test:
     docker:
       - image: hanzhi227/lambda-docker-test:np
