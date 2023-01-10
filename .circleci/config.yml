@@ -15,7 +15,7 @@ jobs:
 #      -
   test:
     docker:
-      - image: hanzhi227/lambda-docker-test:house
+      - image: hanzhi227/lambda-docker-test:np
     steps:
       - checkout
       - python/install-packages:
@@ -23,10 +23,14 @@ jobs:
       - run:
           name: Run tests
           command: pytest
+
 workflows:
-  build-push-docker-and-test:
+#  build-push-docker-and-test:
+#    jobs:
+#      - build
+#      - test:
+#          requires:
+#            - build
+  test-only:
     jobs:
-      - build
-      - test:
-          requires:
-            - build
+      - test
