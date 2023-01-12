@@ -1,3 +1,4 @@
+aws-log-parser==2.2.3
 html2text==2020.1.16
 Jinja2==3.1.1
 boto3==1.20.54
